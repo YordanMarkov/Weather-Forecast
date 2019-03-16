@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast</title>
+<style>
+th {
+  text-align: center;
+}
+</style>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+</head>
+<body style='height: 100%;margin: 0;background-size: cover; -ms-background-size: cover; -o-background-size: cover; -moz-background-size: cover; -webkit-background-size: cover;'>
+<img src="https://cdn1.iconfinder.com/data/icons/weather-filled-two-color/614/429_-_Sunny-512.png" style="width:150px;height:150px;float:right;border:0"/>
+    <h1 style="text-align:right;font-size:200%;color:white; font-family:verdana;"><i>Weather Forecast</i></h1>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table style="width:100%">
+  <tr>
+    <th style="color:white; font-size:300%; font-family:verdana">Температура</th>
+    <th style="color:white; font-size:300%; font-family:verdana">Влажност</th>
+    <th style="color:white; font-size:300%; font-family:verdana">Налягане</th>
+  </tr>
+  <tr>
+    <td style="color:yellow; font-family:verdana; font-size:600%; text-align:center">29°C</td>
+    <td style="color:yellow; font-family:verdana; font-size:600%; text-align:center">34%</td>
+    <td style="color:yellow; font-family:verdana; font-size:600%; text-align:center">50hPa</td>
+  </tr>
+  <tr>
+  </tr>
+</table>
+ <h2 id="a1" style="display:none;" background="https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></h2>
+<h2 id="a2" style="display:none;" background="https://ak1.picdn.net/shutterstock/videos/11526341/thumb/1.jpg"></h2>
+<h2 id="a3" style="display:none;" background="https://jooinn.com/images/cloudy-61.png"></h2>
+<h2 id="a4" style="display:none;" background=" https://danielphounsavan.files.wordpress.com/2013/10/rain_drops_keep_falling_wallpaper-wide.jpg"></h2>
+<script>
+
+$(document).ready(function() {
+    var temperature;
+var pressure;
+var humidity;
+if(humidity<=30){
+document.getElementById("a1").style.display = "block";
+$('body').css('background-image', 'url(https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)');
+}else if (humidity>=31 && humidity<=60){
+document.getElementById("a3").style.display = "block";
+$('body').css('background-image', 'url(https://jooinn.com/images/cloudy-61.png)');
+}else if(humidity>=61 && humidity<=84){
+document.getElementById("a2").style.display = "block";
+$('body').css('background-image', 'url(https://ak1.picdn.net/shutterstock/videos/11526341/thumb/1.jpg)');
+}else if(humidity>=85){
+document.getElementById("a4").style.display = "block";
+$('body').css('background-image', 'url( https://danielphounsavan.files.wordpress.com/2013/10/rain_drops_keep_falling_wallpaper-wide.jpg)');
+}
+
+});
+
+</script>
+
+</body>
+</html>
+<!--https://jooinn.com/images/cloudy-61.png -->
