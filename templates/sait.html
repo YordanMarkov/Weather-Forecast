@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script>
+setTimeout(function(){ window.location.reload(); }, 3000);
+</script>
     <meta charset="UTF-8">
     <title>Weather Forecast</title>
 <style>
@@ -26,9 +29,9 @@ th {
     <th style="color:white; font-size:300%; font-family:verdana">Налягане</th>
   </tr>
   <tr>
-    <td style="color:yellow; font-family:verdana; font-size:600%; text-align:center">29°C</td>
-    <td style="color:yellow; font-family:verdana; font-size:600%; text-align:center">34%</td>
-    <td style="color:yellow; font-family:verdana; font-size:600%; text-align:center">50hPa</td>
+    <td style="color:yellow; font-family:verdana; font-size:600%; text-align:center">{{ temp }}°C</td>
+    <td style="color:yellow; font-family:verdana; font-size:600%; text-align:center">{{ hum }}%</td>
+    <td style="color:yellow; font-family:verdana; font-size:600%; text-align:center">{{ pre }}hPa</td>
   </tr>
   <tr>
   </tr>
@@ -40,9 +43,9 @@ th {
 <script>
 
 $(document).ready(function() {
-    var temperature;
-var pressure;
-var humidity;
+    var temperature = {{ temp }};
+var pressure = {{ pre }};
+var humidity = {{ hum }};
 if(humidity<=30){
 document.getElementById("a1").style.display = "block";
 $('body').css('background-image', 'url(https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)');
